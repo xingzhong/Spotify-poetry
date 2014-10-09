@@ -56,6 +56,10 @@
 	
 	<script>
 	$(document).ready(function(){
+	  $.getJSON("http://api.icndb.com/jokes/random/", {}, function(res){
+	  	console.log(res);
+	  	$("#query").val(res.value.joke);
+	  })
 	  $("#alert").hide();
 	  $("button").click(function(){
 	    $.getJSON("/search", {q: $("#query").val()},

@@ -40,7 +40,7 @@ class spotify(object):
         self._c += 1
         if r.status_code == 200:
             self._cache[q] = r.json()
-            print "[debug %s %s] req : q = %s"%(self._c, self._cache[q]['tracks']['total'], q)
+            #print "[debug %s %s] req : q = %s"%(self._c, self._cache[q]['tracks']['total'], q)
         else:
             self._cache[q] = None
         return self._cache[q]
